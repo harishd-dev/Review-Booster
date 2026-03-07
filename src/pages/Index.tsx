@@ -3,7 +3,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { Check, Copy, ExternalLink, Sun, Moon, RefreshCw } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const REVIEW_URL = "http://search.google.com/local/writereview?placeid=ChIJr5bKUwD3UjoRCnvEc1zCskk";
+const REVIEW_URL = "https://www.google.com/search?client=ms-android-samsung-ss&hs=0cTp&sca_esv=ec80bda997b12d86&sxsrf=ANbL-n59-d9ArTBlX2MVBCE3WhhWCokMkQ:1772882556411&q=decathlon+sports+-+kilambakkam+kilambakkam,+vandalur+reviews&uds=ALYpb_lh-JAfu11ByNKDGkZQ_DOHmyyiHJD37OvYJbfxUTi80Pwbh9rvm0TgJLDc7fPyRc7XRc82TmwEIBbtKNLMJT4EJbWIRFgNg9lnS2uMBEVSTrgIQD6YeNrf95maflEQ1i4xi0K6_bSKYqodS2oXCJfGG3Tx_vny0VjSsZx4tzrOSr--j1_9LV1iZLDcxidF61iqcdZF2N7g7NsI4XJpYGJB9o91zciFm9mhNI8Zva8mT-KUPEZD5va9gDfgPGoQWB7IgxVpyxbnAthtRXSU4mL3N61OtKdq2CPPSlmFSU8h9pkpC8lGweZNjEVjeyFXKIfdYdWS5-0Sec5eiJj4jOMcdQ-hBcp16MvMggaLWUdV_leL6Ns_aH9Ufd3hPLZqje93gmD_SVBv1BoQskU-xAoxILK2pXWet2gbRtHU-vHBRFsG5UHJcWapjP-pTlb1ViixVHXUWWDENGxMkRIgTobrFTLyf0JIAM9BTJlOkvF_aumrVoNyKG0kpj0qFJBZ_Rm_3c-N0M2-vD6qNX7ya0ERxtDdkOkg_wMz105pKHHW66h9bQm5Xb0bGkGWjCVK7A-l1RvklV-p6o61_RtYXgnsE9qHGiaGyYc9Vz-GfBpA5stTC9E&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOb0ZatptH-QMTz2ZOjB8FeVjrymDSNr1Do9bK1JvyAhqkYAkGgtJDlitRJF-j8B9fjgHrqSQjucnJNra85ioxL_SHcgWmkdvqKywtD9s1qqN1IfhWM13tkfDz8qxSFNj4lvyLFzsOcsPIRZycD84YfiVh4_o&sa=X&sqi=2&ved=2ahUKEwimmIOY1o2TAxVnSmwGHYseAR4Qk8gLegUItgEQAQ&ictx=1&biw=411&bih=790&dpr=2.63";
 
 const products = [
   "knee support", "ankle brace", "football shoes", "badminton racket",
