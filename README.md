@@ -15,10 +15,10 @@ The page also contains a **link to my personal portfolio**, allowing visitors to
 ## Live Project
 
 Review Page
-(Add your deployed review page link here)
+https://psreview.vercel.app/
 
 Portfolio
-https://harish-ps.vercel.app
+https://harishps.vercel.app
 
 ---
 
@@ -88,13 +88,13 @@ assets/ → Images and QR code
 Clone the repository:
 
 ```bash id="5u7u6m"}
-git clone https://github.com/Harish-D25/<REPO_NAME>.git
+git clone https://github.com/Harishd-dev/Review-Booster.git
 ```
 
 Navigate into the project:
 
 ```bash id="p8i4rv"}
-cd <REPO_NAME>
+cd Review_Booster
 ```
 
 Open the project:
@@ -125,7 +125,7 @@ Instead of asking customers to write a review from scratch, the page provides a 
 
 If you'd like to see more of my work:
 
-https://harish-ps.vercel.app
+https://harishps.vercel.app
 
 ---
 
@@ -135,7 +135,7 @@ Email
 [harish.hema04@gmail.com](mailto:harish.hema04@gmail.com)
 
 GitHub
-https://github.com/Harish-D25
+https://github.com/Harishd-dev
 
 LinkedIn
 https://linkedin.com/in/harish
