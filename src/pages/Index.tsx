@@ -3,7 +3,7 @@ import { QRCodeSVG } from "qrcode.react";
 import { Check, Copy, ExternalLink, Sun, Moon, RefreshCw } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJ_f5S4x9eUjoR6eQvRsY2mRw";
+const REVIEW_URL = "http://search.google.com/local/writereview?placeid=ChIJr5bKUwD3UjoRCnvEc1zCskk";
 
 const products = [
   "knee support", "ankle brace", "football shoes", "badminton racket",
