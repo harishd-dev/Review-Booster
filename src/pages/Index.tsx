@@ -242,7 +242,7 @@ const generateReview = () => {
   const harishPlacement = Math.floor(Math.random() * 3); // 0=opening, 1=action, 2=ending
 
   const opening = harishPlacement === 0 ? pick(tone.openingsWithHarish) : pick(tone.openingsNeutral);
-  const action = (harishPlacement === 1 ? pick(tone.actionsWithHarish) : pick(tone.actionsNeutral)) + " " + pick(products) + ".";
+  const action = (harishPlacement === 1 ? pick(tone.actionsWithHarish) : pick(tone.actionsNeutral)) + " " + pick(products) + " ";
   const ending = harishPlacement === 2 ? pick(tone.endingsWithHarish) : pick(tone.endingsNeutral);
 
   return [opening, action, ending].join(" ");
