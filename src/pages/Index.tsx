@@ -3,238 +3,235 @@ import { QRCodeSVG } from "qrcode.react";
 import { Check, Copy, ExternalLink, Sun, Moon, RefreshCw } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const REVIEW_URL = "https://www.google.com/search?client=ms-android-samsung-ss&hs=0cTp&sca_esv=ec80bda997b12d86&sxsrf=ANbL-n59-d9ArTBlX2MVBCE3WhhWCokMkQ:1772882556411&q=decathlon+sports+-+kilambakkam+kilambakkam,+vandalur+reviews&uds=ALYpb_lh-JAfu11ByNKDGkZQ_DOHmyyiHJD37OvYJbfxUTi80Pwbh9rvm0TgJLDc7fPyRc7XRc82TmwEIBbtKNLMJT4EJbWIRFgNg9lnS2uMBEVSTrgIQD6YeNrf95maflEQ1i4xi0K6_bSKYqodS2oXCJfGG3Tx_vny0VjSsZx4tzrOSr--j1_9LV1iZLDcxidF61iqcdZF2N7g7NsI4XJpYGJB9o91zciFm9mhNI8Zva8mT-KUPEZD5va9gDfgPGoQWB7IgxVpyxbnAthtRXSU4mL3N61OtKdq2CPPSlmFSU8h9pkpC8lGweZNjEVjeyFXKIfdYdWS5-0Sec5eiJj4jOMcdQ-hBcp16MvMggaLWUdV_leL6Ns_aH9Ufd3hPLZqje93gmD_SVBv1BoQskU-xAoxILK2pXWet2gbRtHU-vHBRFsG5UHJcWapjP-pTlb1ViixVHXUWWDENGxMkRIgTobrFTLyf0JIAM9BTJlOkvF_aumrVoNyKG0kpj0qFJBZ_Rm_3c-N0M2-vD6qNX7ya0ERxtDdkOkg_wMz105pKHHW66h9bQm5Xb0bGkGWjCVK7A-l1RvklV-p6o61_RtYXgnsE9qHGiaGyYc9Vz-GfBpA5stTC9E&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOb0ZatptH-QMTz2ZOjB8FeVjrymDSNr1Do9bK1JvyAhqkYAkGgtJDlitRJF-j8B9fjgHrqSQjucnJNra85ioxL_SHcgWmkdvqKywtD9s1qqN1IfhWM13tkfDz8qxSFNj4lvyLFzsOcsPIRZycD84YfiVh4_o&sa=X&sqi=2&ved=2ahUKEwimmIOY1o2TAxVnSmwGHYseAR4Qk8gLegUItgEQAQ&ictx=1&biw=411&bih=790&dpr=2.63";
+const REVIEW_URL = "https://maps.app.goo.gl/d2amr8xBsVdJ3zBU9";
 
 const products = [
   "knee support", "ankle brace", "football shoes", "badminton racket",
   "gym gloves", "yoga mat", "resistance bands", "running shoes",
   "water bottle", "fitness accessories", "cricket bat", "cycling gloves",
   "swim goggles", "hiking backpack", "compression socks", "skipping rope",
-  "wrist support", "sports shoes", "track pants", "dumbbell set",
+  "wrist support", "sports shoes", "track pants", "dumbbell set"
 ];
-
-// --- TONE TEMPLATES ---
-// Each tone has its own openings, actions, and endings for natural variety.
 
 const tones = {
   casual: {
     openingsNeutral: [
-      "Went to Decathlon today, pretty chill experience.",
-      "Dropped by Decathlon after work. Good vibes.",
-      "Random Decathlon visit turned out really well.",
-      "Was just browsing at Decathlon and ended up buying something lol.",
-      "Popped into Decathlon on a whim. No regrets.",
-      "Quick trip to Decathlon. Solid as always.",
-      "Swung by Decathlon earlier. Easy breezy.",
+      "went to decathlon today pretty chill experience",
+      "dropped by decathlon after work good vibes",
+      "random decathlon visit turned out really well",
+      "was just browsing at decathlon and ended up buying something lol",
+      "popped into decathlon on a whim no regrets",
+      "quick trip to decathlon solid as always",
+      "swung by decathlon earlier easy breezy"
     ],
     openingsWithHarish: [
-      "Ran into Harish at Decathlon — dude's super chill and helpful.",
-      "Harish at Decathlon is honestly the best. So laid back and helpful.",
-      "Walked in and Harish was like 'hey, need help?' — loved that.",
-      "Harish spotted me looking confused and came right over lol.",
+      "ran into harish at decathlon dudes super chill and helpful",
+      "harish at decathlon is honestly the best so laid back and helpful",
+      "walked in and harish was like hey need help loved that",
+      "harish spotted me looking confused and came right over lol"
     ],
     actionsWithHarish: [
-      "Harish helped me grab the right",
-      "Harish sorted me out with a solid",
-      "Harish pointed me to the perfect",
-      "Harish knew exactly what I needed and got me a",
-      "Harish made it super easy to pick a",
-      "Asked Harish for advice and he nailed it — got me a great",
+      "harish helped me grab the right",
+      "harish sorted me out with a solid",
+      "harish pointed me to the perfect",
+      "harish knew exactly what i needed and got me a",
+      "harish made it super easy to pick a",
+      "asked harish for advice and he nailed it got me a great"
     ],
     actionsNeutral: [
-      "Ended up grabbing a pretty decent",
-      "Found a solid",
-      "Picked up a nice",
-      "Got exactly what I needed —",
-      "Walked out with a great",
+      "ended up grabbing a pretty decent",
+      "found a solid",
+      "picked up a nice",
+      "got exactly what i needed",
+      "walked out with a great"
     ],
     endingsNeutral: [
-      "Would go back for sure.",
-      "Happy with what I got.",
-      "No complaints at all.",
-      "Pretty satisfied tbh.",
-      "Decent store, decent stuff.",
-      "Will probably be back next week lol.",
+      "would go back for sure",
+      "happy with what i got",
+      "no complaints at all",
+      "pretty satisfied tbh",
+      "decent store decent stuff",
+      "will probably be back next week lol"
     ],
     endingsWithHarish: [
-      "Cheers Harish, you made it easy!",
-      "Harish is the man. Will definitely ask for him again.",
-      "Thanks Harish — you're a legend.",
-      "Shoutout to Harish for keeping it real.",
-    ],
+      "cheers harish you made it easy",
+      "harish is the man will definitely ask for him again",
+      "thanks harish youre a legend",
+      "shoutout to harish for keeping it real"
+    ]
   },
 
   enthusiastic: {
     openingsNeutral: [
-      "Absolutely LOVED my visit to Decathlon today!",
-      "What an amazing experience at Decathlon! 🙌",
-      "Decathlon never disappoints — another fantastic visit!",
-      "Blown away by the service at Decathlon today!",
-      "Had the BEST time at Decathlon. So much good stuff!",
-      "Decathlon is hands down my favorite store. Another great trip!",
-      "Every time I visit Decathlon, I'm impressed all over again!",
+      "absolutely loved my visit to decathlon today",
+      "what an amazing experience at decathlon",
+      "decathlon never disappoints another fantastic visit",
+      "blown away by the service at decathlon today",
+      "had the best time at decathlon so much good stuff",
+      "decathlon is hands down my favorite store another great trip",
+      "every time i visit decathlon im impressed all over again"
     ],
     openingsWithHarish: [
-      "Harish at Decathlon is absolutely incredible! What a welcome!",
-      "HUGE shoutout to Harish — he made my Decathlon visit amazing!",
-      "Harish greeted me with so much energy at Decathlon. Love it!",
-      "The moment I walked in, Harish made me feel like a VIP!",
+      "harish at decathlon is absolutely incredible what a welcome",
+      "huge shoutout to harish he made my decathlon visit amazing",
+      "harish greeted me with so much energy at decathlon love it",
+      "the moment i walked in harish made me feel like a vip"
     ],
     actionsWithHarish: [
-      "Harish went above and beyond to help me find the perfect",
-      "Harish was SO knowledgeable and helped me pick out an amazing",
-      "Harish's recommendations were spot on — I got an incredible",
-      "Harish literally spent time explaining everything and I found the best",
-      "I'm so glad Harish was there — he helped me discover an awesome",
+      "harish went above and beyond to help me find the perfect",
+      "harish was so knowledgeable and helped me pick out an amazing",
+      "harishs recommendations were spot on i got an incredible",
+      "harish literally spent time explaining everything and i found the best",
+      "im so glad harish was there he helped me discover an awesome"
     ],
     actionsNeutral: [
-      "I found the most amazing",
-      "The selection was incredible — I picked up a fantastic",
-      "I was blown away by the quality of the",
-      "Couldn't believe how perfect the",
-      "So happy I found exactly the right",
+      "i found the most amazing",
+      "the selection was incredible i picked up a fantastic",
+      "i was blown away by the quality of the",
+      "couldnt believe how perfect the",
+      "so happy i found exactly the right"
     ],
     endingsNeutral: [
-      "Best shopping experience in a long time! ⭐⭐⭐⭐⭐",
-      "I'm telling ALL my friends about this store!",
-      "Absolutely coming back. This place is gold!",
-      "Can't recommend this store enough. Truly wonderful!",
-      "Left the store smiling. That says it all!",
-      "Outstanding experience from start to finish!",
+      "best shopping experience in a long time",
+      "im telling all my friends about this store",
+      "absolutely coming back this place is gold",
+      "cant recommend this store enough truly wonderful",
+      "left the store smiling that says it all",
+      "outstanding experience from start to finish"
     ],
     endingsWithHarish: [
-      "Harish, you're a STAR! Thank you so much!",
-      "Everyone needs a Harish at their store. Absolute gem!",
-      "Can't thank Harish enough. He made my day!",
-      "Harish deserves employee of the month, honestly!",
-      "If you go to Decathlon, find Harish. You won't regret it!",
-    ],
+      "harish youre a star thank you so much",
+      "everyone needs a harish at their store absolute gem",
+      "cant thank harish enough he made my day",
+      "harish deserves employee of the month honestly",
+      "if you go to decathlon find harish you wont regret it"
+    ]
   },
 
   brief: {
     openingsNeutral: [
-      "Quick visit to Decathlon.",
-      "Stopped by Decathlon.",
-      "Decathlon run today.",
-      "In and out of Decathlon.",
-      "Short trip to Decathlon.",
+      "quick visit to decathlon",
+      "stopped by decathlon",
+      "decathlon run today",
+      "in and out of decathlon",
+      "short trip to decathlon"
     ],
     openingsWithHarish: [
-      "Harish at Decathlon — quick and efficient.",
-      "Met Harish at Decathlon. Great help.",
-      "Harish sorted me out at Decathlon.",
+      "harish at decathlon quick and efficient",
+      "met harish at decathlon great help",
+      "harish sorted me out at decathlon"
     ],
     actionsWithHarish: [
-      "Harish helped me pick a good",
-      "Harish found me the right",
-      "Harish recommended a solid",
-      "Got a great recommendation from Harish for a",
+      "harish helped me pick a good",
+      "harish found me the right",
+      "harish recommended a solid",
+      "got a great recommendation from harish for a"
     ],
     actionsNeutral: [
-      "Got a good",
-      "Picked up a",
-      "Found a nice",
-      "Grabbed a solid",
+      "got a good",
+      "picked up a",
+      "found a nice",
+      "grabbed a solid"
     ],
     endingsNeutral: [
-      "Happy with it.",
-      "Would recommend.",
-      "Good store.",
-      "Satisfied.",
-      "Will come back.",
-      "👍",
+      "happy with it",
+      "would recommend",
+      "good store",
+      "satisfied",
+      "will come back",
+      ""
     ],
     endingsWithHarish: [
-      "Thanks Harish.",
-      "Harish was great.",
-      "Ask for Harish.",
-      "Harish knows his stuff.",
-    ],
+      "thanks harish",
+      "harish was great",
+      "ask for harish",
+      "harish knows his stuff"
+    ]
   },
 
   friendly: {
     openingsNeutral: [
-      "Had a really nice time at Decathlon today!",
-      "Always enjoy going to Decathlon. Today was no different.",
-      "Love this store! Another lovely visit to Decathlon.",
-      "Decathlon is such a well-run store. Enjoyed my visit!",
-      "Came to Decathlon with my family and we all had a great time.",
-      "Nice afternoon spent at Decathlon. Good stuff all around.",
+      "had a really nice time at decathlon today",
+      "always enjoy going to decathlon today was no different",
+      "love this store another lovely visit to decathlon",
+      "decathlon is such a well run store enjoyed my visit",
+      "came to decathlon with my family and we all had a great time",
+      "nice afternoon spent at decathlon good stuff all around"
     ],
     openingsWithHarish: [
-      "Harish was so friendly when I walked into Decathlon!",
-      "Bumped into Harish at Decathlon — he's always so warm and welcoming.",
-      "Harish remembered me from last time! Such a personal touch at Decathlon.",
-      "Walked in and Harish greeted me with a big smile. Made my day!",
+      "harish was so friendly when i walked into decathlon",
+      "bumped into harish at decathlon hes always so warm and welcoming",
+      "harish remembered me from last time such a personal touch at decathlon",
+      "walked in and harish greeted me with a big smile made my day"
     ],
     actionsWithHarish: [
-      "Harish patiently helped me choose a lovely",
-      "Harish spent time with me and helped me find the right",
-      "Harish was kind enough to walk me through the options for a",
-      "Harish personally recommended a wonderful",
-      "With Harish's help, I picked out a great",
+      "harish patiently helped me choose a lovely",
+      "harish spent time with me and helped me find the right",
+      "harish was kind enough to walk me through the options for a",
+      "harish personally recommended a wonderful",
+      "with harishs help i picked out a great"
     ],
     actionsNeutral: [
-      "Found a really nice",
-      "The team helped me pick a great",
-      "Was pleasantly surprised by the quality of the",
-      "Ended up choosing a wonderful",
-      "Got some help and found the perfect",
+      "found a really nice",
+      "the team helped me pick a great",
+      "was pleasantly surprised by the quality of the",
+      "ended up choosing a wonderful",
+      "got some help and found the perfect"
     ],
     endingsNeutral: [
-      "Such a warm experience. Will be back soon!",
-      "Really appreciate the helpful staff here.",
-      "Left with a smile. Thank you!",
-      "A genuinely pleasant shopping trip.",
-      "Keep up the lovely work, Decathlon!",
+      "such a warm experience will be back soon",
+      "really appreciate the helpful staff here",
+      "left with a smile thank you",
+      "a genuinely pleasant shopping trip",
+      "keep up the lovely work decathlon"
     ],
     endingsWithHarish: [
-      "Thank you so much, Harish! You're wonderful.",
-      "Harish, you always make shopping fun. See you next time!",
-      "Really grateful for Harish's patience and kindness.",
-      "Harish is the reason I keep coming back. Thank you!",
-    ],
+      "thank you so much harish youre wonderful",
+      "harish you always make shopping fun see you next time",
+      "really grateful for harishs patience and kindness",
+      "harish is the reason i keep coming back thank you"
+    ]
   },
 
   storytelling: {
     openingsNeutral: [
-      "So I hadn't planned on going to Decathlon today, but I'm glad I did.",
-      "I'd been putting off getting new gear for weeks. Finally made it to Decathlon.",
-      "My friend told me to check out Decathlon for sports gear. Glad I listened.",
-      "I was walking past Decathlon and thought, why not? Turned out to be a great decision.",
-      "Been meaning to visit Decathlon for a while. Today was the day.",
+      "so i hadnt planned on going to decathlon today but im glad i did",
+      "id been putting off getting new gear for weeks finally made it to decathlon",
+      "my friend told me to check out decathlon for sports gear glad i listened",
+      "i was walking past decathlon and thought why not turned out to be a great decision",
+      "been meaning to visit decathlon for a while today was the day"
     ],
     openingsWithHarish: [
-      "I walked into Decathlon not knowing what to get, and that's when Harish stepped in.",
-      "Funny story — I almost left Decathlon empty-handed until Harish came over.",
-      "So there I was, staring at a wall of products at Decathlon, when Harish showed up and saved me.",
-      "I was totally lost in Decathlon until Harish noticed and came to help.",
+      "i walked into decathlon not knowing what to get and thats when harish stepped in",
+      "funny story i almost left decathlon empty handed until harish came over",
+      "so there i was staring at a wall of products at decathlon when harish showed up and saved me",
+      "i was totally lost in decathlon until harish noticed and came to help"
     ],
     actionsWithHarish: [
-      "Harish listened to what I needed and straight away pulled out the perfect",
-      "After a quick chat, Harish knew exactly what would work — he handed me a",
-      "Harish asked a few questions, then confidently led me to the ideal",
-      "Harish took his time, showed me the pros and cons, and I walked away with a",
+      "harish listened to what i needed and straight away pulled out the perfect",
+      "after a quick chat harish knew exactly what would work he handed me a",
+      "harish asked a few questions then confidently led me to the ideal",
+      "harish took his time showed me the pros and cons and i walked away with a"
     ],
     actionsNeutral: [
-      "After looking around for a bit, I settled on a really solid",
-      "Took my time browsing and finally landed on a great",
-      "Compared a few options and went with a",
-      "Did some browsing and found the right",
+      "after looking around for a bit i settled on a really solid",
+      "took my time browsing and finally landed on a great",
+      "compared a few options and went with a",
+      "did some browsing and found the right"
     ],
     endingsNeutral: [
-      "All in all, a really worthwhile trip.",
-      "Walked out feeling like I got exactly what I came for.",
-      "Sometimes the unplanned visits are the best ones.",
-      "Glad I made the trip. Won't wait so long next time.",
+      "all in all a really worthwhile trip",
+      "walked out feeling like i got exactly what i came for",
+      "sometimes the unplanned visits are the best ones",
+      "glad i made the trip wont wait so long next time"
     ],
     endingsWithHarish: [
-      "Wouldn't have found it without Harish. Genuinely grateful.",
-      "Harish turned what could've been a confusing trip into a smooth one. Legend.",
-      "If Harish hadn't helped me, I'd probably still be standing there lol. Thanks man!",
-      "The kind of service Harish gives is rare these days. Really appreciate it.",
-    ],
-  },
+      "wouldnt have found it without harish genuinely grateful",
+      "harish turned what couldve been a confusing trip into a smooth one legend",
+      "if harish hadnt helped me id probably still be standing there lol thanks man",
+      "the kind of service harish gives is rare these days really appreciate it"
+    ]
+  }
 };
 
 const toneKeys = Object.keys(tones) as (keyof typeof tones)[];
